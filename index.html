@@ -8,11 +8,12 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #4a216b; /* Background image color */
+            background: linear-gradient(135deg, #4a216b, #6b2d87); /* Attractive gradient inspired by purple background */
             display: flex;
             flex-direction: column;
             align-items: center;
             min-height: 100vh;
+            color: #333;
         }
         .header {
             background-color: #4a216b;
@@ -20,11 +21,14 @@
             padding: 20px;
             text-align: center;
             width: 100%;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
             position: relative;
         }
         .header h1 {
             margin: 0;
             font-size: 2.5em;
+            font-weight: bold;
+            text-transform: uppercase;
         }
         .header .nav {
             position: absolute;
@@ -36,69 +40,184 @@
             margin-left: 20px;
             text-decoration: none;
             font-size: 1.1em;
+            transition: color 0.3s;
+        }
+        .header .nav a:hover {
+            color: #ffd700; /* Gold hover effect for attractiveness */
         }
         .search-container {
             text-align: center;
             margin: 40px 0;
-            width: 50%;
+            width: 60%;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         }
         .search-container h2 {
             margin: 0 0 20px 0;
-            color: white;
-            font-size: 2em;
+            color: #4a216b;
+            font-size: 2.5em;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
         }
         .search-container input[type="text"] {
             width: 70%;
-            padding: 10px;
+            padding: 12px;
             font-size: 1.2em;
-            border: none;
+            border: 2px solid #4a216b;
             border-radius: 5px 0 0 5px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+        .search-container input[type="text"]:focus {
+            border-color: #6b2d87;
         }
         .search-container button {
-            padding: 10px 20px;
+            padding: 12px 25px;
             font-size: 1.2em;
             border: none;
             background-color: #4a216b;
             color: white;
             border-radius: 0 5px 5px 0;
             cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .search-container button:hover {
+            background-color: #6b2d87;
+        }
+        .categories {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 20px;
+            padding: 40px 20px;
+            max-width: 1200px;
+            width: 100%;
+        }
+        .category {
+            text-align: center;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .category:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        }
+        .category img {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 15px;
+            filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.1));
+        }
+        .category h3 {
+            margin: 0;
+            color: #4a216b;
+            font-size: 1.3em;
+            font-weight: 600;
+        }
+        .popular-articles {
+            max-width: 1200px;
+            width: 100%;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+        .popular-articles h2 {
+            color: #4a216b;
+            font-size: 1.7em;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+        .popular-articles ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        .popular-articles li {
+            margin-bottom: 15px;
+            color: #333;
+            font-size: 1.1em;
+        }
+        .popular-articles li a {
+            color: #6b2d87;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .popular-articles li a:hover {
+            color: #ffd700;
+            text-decoration: underline;
         }
         .alert {
             background-color: #fff3cd;
             color: #856404;
             padding: 15px;
             text-align: center;
-            margin: 0 20px;
+            margin: 20px;
             border: 1px solid #ffeeba;
             border-radius: 5px;
-            width: 50%;
+            width: 60%;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
         .alert a {
             color: #856404;
             text-decoration: underline;
         }
         .cookie-consent {
-            background-color: #f8f9fa;
-            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 15px;
             text-align: center;
             width: 100%;
             border-top: 1px solid #dee2e6;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
             margin-top: auto;
         }
         .cookie-consent button {
-            padding: 5px 15px;
+            padding: 8px 20px;
             margin: 0 10px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            font-size: 1.1em;
+            transition: background-color 0.3s, transform 0.2s;
         }
         .cookie-consent .disagree {
             background-color: #dc3545;
             color: white;
         }
+        .cookie-consent .disagree:hover {
+            background-color: #c82333;
+            transform: scale(1.05);
+        }
         .cookie-consent .agree {
             background-color: #4a216b;
             color: white;
+        }
+        .cookie-consent .agree:hover {
+            background-color: #6b2d87;
+            transform: scale(1.05);
+        }
+        .cookie-policy {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #4a216b;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            font-size: 1em;
+        }
+        .cookie-policy a {
+            color: white;
+            text-decoration: underline;
+            transition: color 0.3s;
+        }
+        .cookie-policy a:hover {
+            color: #ffd700;
         }
     </style>
 </head>
@@ -116,133 +235,7 @@
         <button type="button">🔍</button>
     </div>
     <div class="alert">
-    </div>
-    <div class="cookie-consent">
-        Our website uses cookies and similar technologies, including for personalization, advertising and analytics purposes, as described in our Cookie settings. By selecting agree, you consent to our use of these cookies and technologies. You can update this selection at any time using our Cookie Consent Tool.
-        <button class="disagree">Disagree</button>
-        <button class="agree">Agree</button>
-    </div>
-
-    <script>
-        document.querySelector('.search-container button').addEventListener('click', function() {
-            alert('Search functionality to be implemented!');
-        });
-        document.querySelector('.cookie-consent .agree').addEventListener('click', function() {
-            document.querySelector('.cookie-consent').style.display = 'none';
-        });
-        document.querySelector('.cookie-consent .disagree').addEventListener('click', function() {
-            alert('You have disagreed to cookies. Some features may be limited.');
-        });
-    </script>
-</body>
-</html>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Roku Support</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f5f5f5;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-height: 100vh;
-        }
-        .header {
-            background-color: #4a216b;
-            color: white;
-            padding: 20px;
-            text-align: center;
-            width: 100%;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-        .header h1 {
-            margin: 0;
-            font-size: 2.5em;
-            font-weight: bold;
-        }
-        .categories {
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            gap: 20px;
-            padding: 40px 20px;
-            max-width: 1200px;
-            width: 100%;
-        }
-        .category {
-            text-align: center;
-            padding: 20px;
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.2s;
-        }
-        .category:hover {
-            transform: translateY(-5px);
-        }
-        .category img {
-            width: 50px;
-            height: 50px;
-            margin-bottom: 10px;
-        }
-        .category h3 {
-            margin: 0;
-            color: #4a216b;
-            font-size: 1.2em;
-        }
-        .popular-articles {
-            max-width: 1200px;
-            width: 100%;
-            padding: 20px;
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin-top: 20px;
-        }
-        .popular-articles h2 {
-            color: #4a216b;
-            font-size: 1.5em;
-            margin-bottom: 10px;
-        }
-        .popular-articles ul {
-            list-style-type: disc;
-            padding-left: 20px;
-        }
-        .popular-articles li {
-            margin-bottom: 10px;
-            color: #333;
-        }
-        .popular-articles li a {
-            color: #4a216b;
-            text-decoration: none;
-        }
-        .popular-articles li a:hover {
-            text-decoration: underline;
-        }
-        .cookie-policy {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: #4a216b;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-        .cookie-policy a {
-            color: white;
-            text-decoration: underline;
-        }
-    </style>
-</head>
-<body>
-    <div class="header">
-        <h1>Roku Support</h1>
+        [Resolved] Roku App Issues - Service is restored. If apps still don't load, please perform a system restart. Settings > System > Power > System Restart <a href="#">More Info</a>
     </div>
     <div class="categories">
         <div class="category">
@@ -293,135 +286,13 @@
             <li><a href="#">Connect your phone to a Roku TV system or streaming player</a></li>
         </ul>
     </div>
-    <div class="cookie-policy">
-        <a href="#">Cookie Policy</a>
-    </div>
-
-    <script>
-        // Add hover effect to categories
-        const categories = document.querySelectorAll('.category');<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Roku Support</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #4a216b; /* Background image color */
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-height: 100vh;
-        }
-        .header {
-            background-color: #4a216b;
-            color: white;
-            padding: 20px;
-            text-align: center;
-            width: 100%;
-            position: relative;
-        }
-        .header h1 {
-            margin: 0;
-            font-size: 2.5em;
-        }
-        .header .nav {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-        }
-        .header .nav a {
-            color: white;
-            margin-left: 20px;
-            text-decoration: none;
-            font-size: 1.1em;
-        }
-        .search-container {
-            text-align: center;
-            margin: 40px 0;
-            width: 50%;
-        }
-        .search-container h2 {
-            margin: 0 0 20px 0;
-            color: white;
-            font-size: 2em;
-        }
-        .search-container input[type="text"] {
-            width: 70%;
-            padding: 10px;
-            font-size: 1.2em;
-            border: none;
-            border-radius: 5px 0 0 5px;
-        }
-        .search-container button {
-            padding: 10px 20px;
-            font-size: 1.2em;
-            border: none;
-            background-color: #4a216b;
-            color: white;
-            border-radius: 0 5px 5px 0;
-            cursor: pointer;
-        }
-        .alert {
-            background-color: #fff3cd;
-            color: #856404;
-            padding: 15px;
-            text-align: center;
-            margin: 0 20px;
-            border: 1px solid #ffeeba;
-            border-radius: 5px;
-            width: 50%;
-        }
-        .alert a {
-            color: #856404;
-            text-decoration: underline;
-        }
-        .cookie-consent {
-            background-color: #f8f9fa;
-            padding: 10px;
-            text-align: center;
-            width: 100%;
-            border-top: 1px solid #dee2e6;
-            margin-top: auto;
-        }
-        .cookie-consent button {
-            padding: 5px 15px;
-            margin: 0 10px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .cookie-consent .disagree {
-            background-color: #dc3545;
-            color: white;
-        }
-        .cookie-consent .agree {
-            background-color: #4a216b;
-            color: white;
-        }
-    </style>
-</head>
-<body>
-    <div class="header">
-        <h1>Roku Support</h1>
-        <div class="nav">
-            <a href="#">Help categories</a>
-            <a href="#">Sign in</a>
-        </div>
-    </div>
-    <div class="search-container">
-        <h2>How can we help?</h2>
-        <input type="text" placeholder="Search Roku support">
-        <button type="button">🔍</button>
-    </div>
-    <div class="alert">
-    </div>
     <div class="cookie-consent">
         Our website uses cookies and similar technologies, including for personalization, advertising and analytics purposes, as described in our Cookie settings. By selecting agree, you consent to our use of these cookies and technologies. You can update this selection at any time using our Cookie Consent Tool.
         <button class="disagree">Disagree</button>
         <button class="agree">Agree</button>
+    </div>
+    <div class="cookie-policy">
+        <a href="#">Cookie Policy</a>
     </div>
 
     <script>
@@ -434,185 +305,9 @@
         document.querySelector('.cookie-consent .disagree').addEventListener('click', function() {
             alert('You have disagreed to cookies. Some features may be limited.');
         });
-    </script>
-</body>
-</html>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Roku Support</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f5f5f5;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-height: 100vh;
-        }
-        .header {
-            background-color: #4a216b;
-            color: white;
-            padding: 20px;
-            text-align: center;
-            width: 100%;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-        .header h1 {
-            margin: 0;
-            font-size: 2.5em;
-            font-weight: bold;
-        }
-        .categories {
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            gap: 20px;
-            padding: 40px 20px;
-            max-width: 1200px;
-            width: 100%;
-        }
-        .category {
-            text-align: center;
-            padding: 20px;
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.2s;
-        }
-        .category:hover {
-            transform: translateY(-5px);
-        }
-        .category img {
-            width: 50px;
-            height: 50px;
-            margin-bottom: 10px;
-        }
-        .category h3 {
-            margin: 0;
-            color: #4a216b;
-            font-size: 1.2em;
-        }
-        .popular-articles {
-            max-width: 1200px;
-            width: 100%;
-            padding: 20px;
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin-top: 20px;
-        }
-        .popular-articles h2 {
-            color: #4a216b;
-            font-size: 1.5em;
-            margin-bottom: 10px;
-        }
-        .popular-articles ul {
-            list-style-type: disc;
-            padding-left: 20px;
-        }
-        .popular-articles li {
-            margin-bottom: 10px;
-            color: #333;
-        }
-        .popular-articles li a {
-            color: #4a216b;
-            text-decoration: none;
-        }
-        .popular-articles li a:hover {
-            text-decoration: underline;
-        }
-        .cookie-policy {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: #4a216b;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-        .cookie-policy a {
-            color: white;
-            text-decoration: underline;
-        }
-    </style>
-</head>
-<body>
-    <div class="header">
-        <h1>Roku Support</h1>
-    </div>
-    <div class="categories">
-        <div class="category">
-            <img src="https://via.placeholder.com/50/4a216b/ffffff?text=Wi-Fi" alt="Wi-Fi Icon">
-            <h3>Wi-Fi & connectivity</h3>
-        </div>
-        <div class="category">
-            <img src="https://via.placeholder.com/50/4a216b/ffffff?text=Remote" alt="Remote Icon">
-            <h3>Remote controls</h3>
-        </div>
-        <div class="category">
-            <img src="https://via.placeholder.com/50/4a216b/ffffff?text=Channels" alt="Channels Icon">
-            <h3>Channels & viewing</h3>
-        </div>
-        <div class="category">
-            <img src="https://via.placeholder.com/50/4a216b/ffffff?text=Account" alt="Account Icon">
-            <h3>Account, payments & subscriptions</h3>
-        </div>
-        <div class="category">
-            <img src="https://via.placeholder.com/50/4a216b/ffffff?text=Device" alt="Device Icon">
-            <h3>Device issues</h3>
-        </div>
-        <div class="category">
-            <img src="https://via.placeholder.com/50/4a216b/ffffff?text=Setup" alt="Setup Icon">
-            <h3>Roku setup</h3>
-        </div>
-        <div class="category">
-            <img src="https://via.placeholder.com/50/4a216b/ffffff?text=Features" alt="Features Icon">
-            <h3>Roku features</h3>
-        </div>
-        <div class="category">
-            <img src="https://via.placeholder.com/50/4a216b/ffffff?text=Audio" alt="Audio Icon">
-            <h3>Audio devices</h3>
-        </div>
-        <div class="category">
-            <img src="https://via.placeholder.com/50/4a216b/ffffff?text=Home" alt="Home Icon">
-            <h3>Roku Smart Home</h3>
-        </div>
-    </div>
-    <div class="popular-articles">
-        <h2>Popular articles</h2>
-        <ul>
-            <li><a href="#">Fix offline smart home device issues</a></li>
-            <li><a href="#">Connect to Wi-Fi</a></li>
-            <li><a href="#">Manage or cancel your subscription</a></li>
-            <li><a href="#">Activate your streaming device</a></li>
-            <li><a href="#">Pair your voice remote</a></li>
-            <li><a href="#">Connect your phone to a Roku TV system or streaming player</a></li>
-        </ul>
-    </div>
-    <div class="cookie-policy">
-        <a href="#">Cookie Policy</a>
-    </div>
-
-    <script>
         // Add hover effect to categories
         const categories = document.querySelectorAll('.category');
-        categories.forEach(category => {
-            category.addEventListener('mouseover', () => {
-                category.style.backgroundColor = '#f0f0f0';
-            });
-            category.addEventListener('mouseout', () => {
-                category.style.backgroundColor = 'white';
-            });
-        });
-    </script>
-</body>
-</html>
-
         categories.forEach(category => {
             category.addEventListener('mouseover', () => {
                 category.style.backgroundColor = '#f0f0f0';
