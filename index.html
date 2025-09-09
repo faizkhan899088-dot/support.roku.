@@ -318,3 +318,175 @@
     </script>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roku Support</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .header {
+            background-color: #4a216b;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            font-weight: bold;
+        }
+        .content {
+            max-width: 1200px;
+            width: 100%;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+        .popular-articles h2 {
+            color: #4a216b;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        .popular-articles ul {
+            list-style-type: disc;
+            padding-left: 20px;
+            columns: 3;
+            -webkit-columns: 3;
+            -moz-columns: 3;
+        }
+        .popular-articles li {
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .popular-articles li a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        .popular-articles li a:hover {
+            text-decoration: underline;
+        }
+        .need-help {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .need-help div {
+            text-align: center;
+            flex: 1;
+        }
+        .need-help h3 {
+            color: #4a216b;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+        .need-help p {
+            color: #666;
+            margin: 0;
+        }
+        .need-help a {
+            color: #0066cc;
+            text-decoration: none;
+            display: block;
+            margin-top: 10px;
+        }
+        .need-help a:hover {
+            text-decoration: underline;
+        }
+        .footer {
+            background-color: #4a216b;
+            color: white;
+            width: 100%;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .footer a {
+            color: white;
+            text-decoration: underline;
+            margin-left: 10px;
+        }
+        .cookie-policy {
+            position: fixed;
+            bottom: 60px;
+            right: 20px;
+            background-color: #4a216b;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .cookie-policy a {
+            color: white;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Roku Support</h1>
+    </div>
+    <div class="content">
+        <div class="popular-articles">
+            <h2>Popular articles</h2>
+            <ul>
+                <li><a href="#">Fix offline smart home device issues</a></li>
+                <li><a href="#">Connect to Wi-Fi</a></li>
+                <li><a href="#">Manage or cancel your subscription</a></li>
+                <li><a href="#">Activate your streaming device</a></li>
+                <li><a href="#">Pair your voice remote</a></li>
+                <li><a href="#">Connect your phone to a Roku TV system or streaming player</a></li>
+            </ul>
+        </div>
+        <div class="need-help">
+            <div>
+                <h3>Chat with us</h3>
+                <p>Get answers to your questions, or be connected to a Roku advisor for more help.</p>
+                <a href="#">Start chatting</a>
+            </div>
+            <div>
+                <h3>Ask the Roku community</h3>
+                <p>Post questions, join discussions, and learn from other Roku users and experts.</p>
+                <a href="#">Check it out</a>
+            </div>
+        </div>
+    </div>
+    <div class="cookie-policy">
+        <a href="#">Cookie Policy</a>
+    </div>
+    <div class="footer">
+        Stay updated on news and offers
+    </div>
+
+    <script>
+        // Add smooth scroll for links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
